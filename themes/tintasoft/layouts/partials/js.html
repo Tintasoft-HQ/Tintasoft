@@ -1,0 +1,93 @@
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-peek-a-bar@3.2.72/dist/js/jquery.peekabar.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="/lib/wow/wow.min.js"></script>
+<script src="/lib/easing/easing.min.js"></script>
+<script src="/lib/waypoints/waypoints.min.js"></script>
+<script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="/lib/isotope/isotope.pkgd.min.js"></script>
+<script src="/lib/lightbox/js/lightbox.min.js"></script>
+<!-- Template Javascript -->
+<script src="/js/main.js"></script>
+<script>
+  $(function () {
+    if (document.getElementById("writer-digitalisasi")) {
+      new Typewriter("#writer-digitalisasi", {
+        strings: [
+          "Mampu Beradaptasi dengan Kondisi Pasar...",
+          "Hemat Biaya Promosi...",
+          "Jangkauan Pasar yang Lebih Luas...",
+          "Kemudahan Melayani Konsumen...",
+          "Mempertahankan Pendapatan...",
+          "Mengembangkan Bisnis...",
+        ],
+        autoStart: true,
+        loop: true,
+      });
+    }
+
+    $("a.go-to-instagram").on("click", function () {
+      document.location.href = "https://www.instagram.com/tintasoftcom";
+    });
+
+    $("a.nav-to-elem").on("click", function () {
+      var elem = $(this).attr("href");
+      if (elem === "#") {
+        $("html, body").scrollTop(0);
+      } else if ($(elem).length > 0) {
+        var scrollTop = $(elem).scrollTop();
+        $("html, body").scrollTop(scrollTop);
+      }
+    });
+
+    $('a[href="#"]').on("click", function (e) {
+      if ($(this).hasClass("back-to-top") || $(this).hasClass("nav-to-elem")) {
+        return true;
+      }
+      e.preventDefault();
+    });
+
+    var defaultBar = new $.peekABar({
+      // custom html content
+      html: "<i class='fas fa-info-circle'></i> Website kami saat ini dalam mode pengembangan, jadi mungkin ada beberapa hal yang tidak berfungsi dengan semestinya.",
+
+      // for autohide option
+      delay: 10000,
+
+      // auto hide after a timeout
+      autohide: true,
+
+      // padding
+      padding: "1em",
+
+      // background color
+      backgroundColor: "#fff",
+
+      animation: {
+        // slide or fade
+        type: "slide",
+
+        // animation speed
+        duration: "slow",
+      },
+
+      // additional CSS class
+      cssClass: "text-white bg-danger",
+
+      // CSS opacity
+      opacity: "100",
+
+      // top or bottom
+      position: "top",
+
+      // Close the bar by clicking on it.
+      closeOnClick: true,
+    });
+
+    setTimeout(function () {
+      defaultBar.show();
+    }, 3000);
+  });
+</script>

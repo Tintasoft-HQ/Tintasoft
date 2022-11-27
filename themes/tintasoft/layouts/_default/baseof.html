@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="id">
+  {{- partial "head.html" . -}}
+  <body>
+    <div id="content" class="container-xxl bg-white p-0">
+      {{- partial "spinner.html" . -}} 
+      {{ if .IsHome }}
+        {{- partial "header.html" . -}} 
+      {{ else }}
+        {{- partial "single-header.html" . -}}
+      {{ end }}
+      {{- block "main" . }}{{- end }} 
+      {{- partial "footer.html" . -}} 
+      {{- partial "backtotop.html" . -}}
+    </div>
+   {{- partial "js.html" . -}}
+  </body>
+</html>

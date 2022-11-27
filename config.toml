@@ -1,0 +1,12 @@
+baseURL = 'https://www.tintasoft.com/'
+languageCode = 'id'
+title = 'Tintasoft'
+theme = 'tintasoft'
+
+[params]
+
+[params.header]
+description = 'Tintasoft membantu mengembangkan bisnis anda dalam tranformasi digital saat ini. Beberapa manfaat digitalisasi pada bisnis atau usaha yang dapat anda dapatkan <span id="writer-digitalisasi"></span><br /><span>- Better Solutions For Your Business.</span>'
+
+[params.cta]
+contact = 'https://api.whatsapp.com/send?phone=6288221748843&text=Halo%20Tintasoft!'
